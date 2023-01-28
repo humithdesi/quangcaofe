@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="container d-flex justify-content-between">
+<p>postlist works!</p>
+<div  *ngFor="let o of obj" class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3">
+<li><a class=""></a>{{o.view}}</li>
+<li><a target="_top"  routerLink="/postDetail/{{o.slug}}"  routerLinkActive="active" ariaCurrentWhenActive="page">{{o.slug}}</a></li>
+</div>
+</div>
+<div *ngFor="let name of obj">
+
+  <h3>
+    <a  target="_top"  [routerLink]="['/postDetail', name.slug]">
+      {{ name.slug}}
+    </a>
+  </h3>
+
+<!-- . . . -->
+
+</div>

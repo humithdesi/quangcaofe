@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      
+    <div *ngIf="isMenu" class="d-flex justify-content-center align-items-center">
+        <li><a routerLink="/postlist" routerLinkActive="active" ariaCurrentWhenActive="page">postlist</a></li>
+      <button *ngIf="isMenu" class="r" type="button" (click)="collapses.toggle()" [attr.aria-expanded]="!isCollapsed">
+        <span class="">55</span>
+      </button>
+    </div>
+    </div>
+  </nav>
+  
+  <div  class="navbar-collapse" id="navbarNav" #collapses="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+    <ul *ngIf="isMenu"  class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Pricing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Disabled</a>
+      </li>
+    </ul>
+  </div>
