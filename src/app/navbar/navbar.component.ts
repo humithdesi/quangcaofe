@@ -1,5 +1,6 @@
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
+import { faCoffee,faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,7 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
 
   constructor(private breakpointObserver:BreakpointObserver){}
-
+  faCoffee = faBars;
   title = 'quangcao';
   isCollapsed = true;
   isMenu=true;

@@ -1,29 +1,49 @@
-<nav class="navbar navbar-expand-lg ">
+<nav class="navbar navbar-expand-lg shadow-sm " style="background-color: rgb(255, 255, 255);">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
-      
+      <a class="navbar-brand" style="margin-left:5%;" href="#"><img src="https://s3luutru.s3.us-west-2.amazonaws.com/logo/logo2.jpg" height="30"></a>
+      <div *ngIf="!isMenu" class="d-flex justify-content-center align-items-center">
+        <li class="nav-item ">
+          <a class="" style="width: 100%;" target="_top"
+            routerLink="/category/lam-bang-hieu" routerLinkActive="activeNav"ariaCurrentWhenActive="page">Làm Bảng Hiệu</a>
+        </li>
+        <li class="nav-item ">
+          <a class="" style="width: 100%;" target="_top"
+            routerLink="/category/in-an" routerLinkActive="activeNav"ariaCurrentWhenActive="page">In Ấn</a>
+        </li>
+        <li class="nav-item ">
+          <a class="" style="width: 100%;" target="_top"
+            routerLink="/category/phan-mem-quang-cao" routerLinkActive="activeNav"ariaCurrentWhenActive="page">Phần Mềm Quảng Cáo</a>
+        </li>
+        <li class="nav-item " style="margin-right: 90px;">
+          <a class="" style="width: 100%;" target="_top"
+            routerLink="/category/chia-se-file-quang-cao" routerLinkActive="activeNav"ariaCurrentWhenActive="page">Chia Sẽ File Quảng Cáo</a>
+        </li>
+      </div>  
     <div *ngIf="isMenu" class="d-flex justify-content-center align-items-center">
-        <li><a routerLink="/postlist" routerLinkActive="active" ariaCurrentWhenActive="page">postlist</a></li>
-      <button *ngIf="isMenu" class="r" type="button" (click)="collapses.toggle()" [attr.aria-expanded]="!isCollapsed">
-        <span class="">55</span>
+      <button *ngIf="isMenu" class="btn btn-primary" type="button" (click)="collapses.toggle()" [attr.aria-expanded]="!isCollapsed" style="border: none;padding:  10px 20px;">
+        <i class="fa-solid fa-bars" style="font-size:medium;"></i>
       </button>
     </div>
     </div>
   </nav>
   
-  <div  class="navbar-collapse" id="navbarNav" #collapses="ngbCollapse" [(ngbCollapse)]="isCollapsed">
+  <div  class="navbar-collapse bg-white" id="navbarNav" #collapses="ngbCollapse" [(ngbCollapse)]="isCollapsed">
     <ul *ngIf="isMenu"  class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
+      <li class="nav-item ">
+        <a class="" style="width: 100%;" target="_top"
+          routerLink="/category/lam-bang-hieu" routerLinkActive="activeNav"ariaCurrentWhenActive="page">Làm Bảng Hiệu</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
+      <li class="nav-item ">
+        <a class="" style="width: 100%;" target="_top"
+          routerLink="/category/in-an" routerLinkActive="activeNav"ariaCurrentWhenActive="page">In Ấn</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
+      <li class="nav-item ">
+        <a class="" style="width: 100%;" target="_top"
+          routerLink="/category/phan-mem-quang-cao" routerLinkActive="activeNav"ariaCurrentWhenActive="page">Phần Mềm Quảng Cáo</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link disabled">Disabled</a>
+      <li class="nav-item " style="margin-right: 90px;">
+        <a class="" style="width: 100%;" target="_top"
+          routerLink="/category/chia-se-file-quang-cao" routerLinkActive="activeNav"ariaCurrentWhenActive="page">Chia Sẽ File Quảng Cáo</a>
       </li>
     </ul>
   </div>

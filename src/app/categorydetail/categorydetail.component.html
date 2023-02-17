@@ -1,0 +1,41 @@
+<head>
+    <meta charset="utf-8" />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+</head>
+<body style="background-color: rgb(60, 137, 205);height: 100vh; height: 100%;">
+<app-navbar></app-navbar>
+<div class="container">
+<h1 class="m-2" style="color: white; margin-top: 20px;">{{category.category}}</h1>
+
+
+<div class="row">
+<div class="col-lg-9 ">
+    <div class="row" >
+        <ng-container *ngFor="let p of category.posts">
+            <div class=" col-lg-4 col-md-6" >
+                <div class="shadow bg-white" style="margin-bottom: 25px">
+                <img src="{{p.image}}" class="" style="width: 100%;" alt="...">
+                
+                <h5 class="card-title p-2">Card title</h5>
+                <p class="limitText p-2" [innerHTML]="p.content"></p>
+                <li class="text-center bg-primary-subtle p-2" >
+                    <a routerLink="/postDetail/{{p.slug}}"  routerLinkActive="active" ariaCurrentWhenActive="page">Go somewhere</a>
+                </li>
+                
+            </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
+<div class="col-lg-3">
+    <app-taglist></app-taglist>
+    <app-postlist></app-postlist>
+</div>
+</div>
+</div>
+
+</body>
